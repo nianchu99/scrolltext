@@ -176,9 +176,14 @@ public class ScrollTextView extends View implements View.OnLongClickListener {
     public int getmColor(){
         return mColor;
     }
+    public int getBackColor(){return backColor;}
     public boolean getIsScroll(){
         return isScroll;
     }
+    public String getScrollString(){return scrollString;}
+    public int getOrientation(){return orientation;}
+    public int getScrollSpeed(){return scrollSpeed;}
+    public int getScrollSize(){return scrollSize;}
     public void setOrientation(int orientation){
         this.orientation = orientation;
     }
