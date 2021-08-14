@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScrollText">
+        <attr name="scrollColor" format="reference|color"/>
+        <attr name="scrollSize" format="integer"/>
+        <attr name="scrollSpeed" format="integer"/>
+        <attr name="scrollContent" format="string"/>
+        <attr name="scrollBackColor" format="reference|color"/>
+        <attr name="android:orientation">
+        </attr>
+    </declare-styleable>
+</resources>
