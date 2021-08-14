@@ -49,10 +49,6 @@
                <space.nianchu.scrolltext.ScrollTextView
                    android:id="@+id/text4"
                    app:scrollColor="#00FF00"
-                   app:scrollSize="100"
-                   app:scrollSpeed="5"
-                   app:scrollContent="Nice to meet you."
-                   app:scrollBackColor="#000000"
                    android:orientation="vertical"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"/>

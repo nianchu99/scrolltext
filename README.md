@@ -106,7 +106,7 @@ ScrollTextView horizontalText1 = new ScrollTextView(this);
 
 ## Screenshot of the effect
 
-![scrollText1](https://tva1.sinaimg.cn/large/008i3skNly1gtgr0jb38xg608s0i4b2902.gif)
+![scrollText1](https://tva1.sinaimg.cn/large/008i3skNly1gtgrcfjuqmg60860g24qf02.gif)
 
 
 
