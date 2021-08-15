@@ -36,10 +36,10 @@ dependencies {
     apply plugin: 'com.github.dcendents.android-maven'
 
 }
-ext {
-    PUBLISH_GROUP_ID = "space.nianchu.scrolltext"		//项目包名
-    PUBLISH_ARTIFACT_ID = 'scrolltext'			//项目名
-    PUBLISH_VERSION = "0.0.1"				//版本号
-}
-apply from: "${rootProject.projectDir}/publish-mavencentral.gradle"
+//ext {
+//    PUBLISH_GROUP_ID = "space.nianchu.scrolltext"		//项目包名
+//    PUBLISH_ARTIFACT_ID = 'scrolltext'			//项目名
+//    PUBLISH_VERSION = "0.0.1"				//版本号
+//}
+//apply from: "${rootProject.projectDir}/publish-mavencentral.gradle"
 
