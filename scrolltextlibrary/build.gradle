@@ -29,9 +29,17 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     implementation 'androidx.appcompat:appcompat:1.3.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    apply plugin: 'com.github.dcendents.android-maven'
+
 }
+ext {
+    PUBLISH_GROUP_ID = "space.nianchu.scrolltext"		//项目包名
+    PUBLISH_ARTIFACT_ID = 'scrolltext'			//项目名
+    PUBLISH_VERSION = "0.0.1"				//版本号
+}
+apply from: "${rootProject.projectDir}/publish-mavencentral.gradle"
+
