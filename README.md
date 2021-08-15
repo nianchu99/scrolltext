@@ -91,7 +91,7 @@ ScrollTextView horizontalText1 = new ScrollTextView(this);
 
 ### Notice:
 
-**No attribute is required. If there is no setting, the default is: **
+**No attribute is required. If there is no setting, the default is:**
 
 
 
