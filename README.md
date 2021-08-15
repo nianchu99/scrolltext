@@ -1,4 +1,5 @@
 # scrolltext
+
 [![](https://jitpack.io/v/nianchu99/scrolltext.svg)](https://jitpack.io/#nianchu99/scrolltext)
 
 ## summary
@@ -7,11 +8,38 @@ Use ScrollText , you can simply scroll any text. It supports horizontal and vert
 
 ## Usage
 
-###  library
+### Step1. Add this to use java8
 
-By adding  the library to your project.
+```xml
+compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+```
 
-### Maven center
+### Step2. Add the JitPack repository to your build file
+
+Add it in your root build.gradle at the end of repositories
+
+```java
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+### Step3. Add the dependency 
+
+```java
+dependencies {
+  				// The latest version please latest releases, it will be like this "v0.1.1"
+	        implementation 'com.github.nianchu99:scrolltext:latest version'
+	}
+```
+
+
 
 ## Parameters
 
