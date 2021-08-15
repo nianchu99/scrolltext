@@ -1,4 +1,6 @@
 # scrolltext
+[![](https://jitpack.io/v/nianchu99/scrolltext.svg)](https://jitpack.io/#nianchu99/scrolltext)
+
 ## summary
 
 Use ScrollText , you can simply scroll any text. It supports horizontal and vertical scrolling, and you can customize the text color, background color, scroll speed, font size, etc.
