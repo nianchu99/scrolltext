@@ -6,10 +6,13 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.os.Handler;
+import android.os.Message;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.Timer;
@@ -17,6 +20,19 @@ import java.util.TimerTask;
 
 
 public class ScrollTextView extends View implements View.OnLongClickListener {
+    private final static int REFRESH = 0;
+   Handler myHandler = new Handler(){
+       @Override
+       public void handleMessage(@NonNull Message msg) {
+           switch (msg.what){
+               case REFRESH:
+                   scrollTextView.invalidate();
+                   break;
+           }
+           super.handleMessage(msg);
+       }
+   };
+    private ScrollTextView scrollTextView = this;
     private static final String TAG = "ScrollTextView";
     private boolean isScroll = false;
     private Paint.FontMetricsInt fontMetricsInt;
@@ -52,6 +68,7 @@ public class ScrollTextView extends View implements View.OnLongClickListener {
         mBackPaint = new Paint();
         initAttrs(attrs);
         init();
+
         // Set onLongClickListener
 //        setOnLongClickListener(this::onLongClick);
     }
@@ -153,7 +170,9 @@ public class ScrollTextView extends View implements View.OnLongClickListener {
             @Override
             public void run() {
                 currentX -= scrollSpeed;
-                invalidate();
+//                invalidate();
+                new Thread(new RefreshThread()).start();
+//                postInvalidate();
                 if (orientation == 1){
                 if (currentX < textWidth * -1){
                     currentX = getHeight();
@@ -248,5 +267,14 @@ public class ScrollTextView extends View implements View.OnLongClickListener {
         }
 
         return true;
+    }
+    class RefreshThread implements Runnable{
+        @Override
+        public void run() {
+                Message message= new Message();
+                message.what = REFRESH;
+                myHandler.sendMessage(message);
+
+        }
     }
 }

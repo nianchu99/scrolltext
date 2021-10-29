@@ -34,7 +34,7 @@ Add it in your root build.gradle at the end of repositories
 
 ```java
 dependencies {
-  				// The latest version please latest releases, it will be like this "v0.1.1"
+// The latest version please see latest releases, it will be like this "v0.1.1"
 	        implementation 'com.github.nianchu99:scrolltext:latest version'
 	}
 ```
